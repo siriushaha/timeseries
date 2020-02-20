@@ -54,6 +54,5 @@ export class AppService {
       timestamp: timestamp ? new Date(timestamp) : new Date(),
     };
     metrics.push(newMetric);
-    return null;
   }
 }
