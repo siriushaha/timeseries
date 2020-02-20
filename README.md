@@ -77,26 +77,48 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 Build REST APIs according to the following:
 
 I. Build an HTTP API that receives and stores time-based metrics
+
     A. A single API request should be a single metric
+    
     B. Metric has
+    
         1. Namespace
+        
             a. string
+            
         2. Labels
+        
             a. 0 to many
+            
             b. key (string) to value(string) mapping
+            
         3. Fields
+        
             a. 1 to many
-            b. key (string) to value(float) mapping
+            
+            b. key (string) to value(float) mappin
+            
         4. Timestamp
+        
             a. 0 or 1
+            
             b. If 0 the timestamp is considered the time the metric is received
+            
     C. Storage
+    
         1. Storage can be ephemeral in-memory
+        
     D. Should be able to store more than 100 metric requests per second.
+    
 
 II. Build an HTTP API that queries the metric storage
+
     A. Should support time ranges in which the only metrics returned are between 2 times
+    
     B. Should support optional filtering by Label key(string) and value(string)
+    
     C. Should support optional filtering by Namespace(string)
+    
     D. Response Format:
+    
         1. Array of 0 or more Metrics
