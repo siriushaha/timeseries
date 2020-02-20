@@ -17,6 +17,7 @@ export class AppService {
       const start = new Date(startTimestamp);
       const ending = new Date(endingTimestamp);
       return (
+        start.getTime() <= ending.getTime() &&
         metric.timestamp.getTime() >= start.getTime() &&
         metric.timestamp.getTime() <= ending.getTime()
       );
